@@ -11,7 +11,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 
 @Data
-@Document(collation = "User")
+@Document(collection = "user")
 @RequiredArgsConstructor
 public class User {
     @Id

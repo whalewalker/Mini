@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NonNull;
 import mini.models.Gender;
-import mini.models.User;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Email;
