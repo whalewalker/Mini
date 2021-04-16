@@ -1,6 +1,5 @@
 package mini.controllers;
 
-import lombok.extern.slf4j.Slf4j;
 import mini.dtos.UserRegisterDTO;
 import mini.exceptions.RegisterUserException;
 import mini.models.ApiResponse;
@@ -8,10 +7,8 @@ import mini.services.RegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "*", maxAge = 3600)
