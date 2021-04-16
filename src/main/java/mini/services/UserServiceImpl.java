@@ -29,19 +29,19 @@ public class UserServiceImpl implements UserService{
     @Override
     public List<User> findUserByGender(Gender gender) throws RegisterUserException {
         List<User> userToFind = registerUserRepository.findUserByGender(gender);
-        UserIsValid(userToFind.isEmpty(), "No users found");
+        UserIsValid(userToFind.isEmpty());
         return userToFind;
     }
 
     @Override
     public List<User> findUserByFirstNameContaining(String firstName) throws RegisterUserException {
         List<User> usersToFind = registerUserRepository.findUserByFirstNameContaining(firstName);
-        UserIsValid(usersToFind.isEmpty(), "No users found");
+        UserIsValid(usersToFind.isEmpty());
         return usersToFind;
     }
 
-    private void UserIsValid(boolean empty, String message) throws RegisterUserException {
-        if (empty) throw new RegisterUserException(message);
+    private void UserIsValid(boolean empty) throws RegisterUserException {
+        if (empty) throw new RegisterUserException("No users found");
     }
 
     @Override
