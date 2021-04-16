@@ -1,6 +1,6 @@
 package mini.services;
 
-import mini.dtos.UserLoginDto;
+import mini.dtos.UserLoginDTO;
 import mini.dtos.UserRegisterDTO;
 import mini.exceptions.RegisterUserException;
 import mini.exceptions.UserLoginException;
@@ -59,20 +59,20 @@ public class UserTest {
 
     @Test
     void checkIfUserCanLogin() throws UserLoginException {
-        UserLoginDto loginDto = new UserLoginDto("adex@gmail.com", "12345");
+        UserLoginDTO loginDto = new UserLoginDTO("adex@gmail.com", "12345");
         boolean isValid = loginService.isLoggedIn(loginDto);
         assertTrue(isValid);
     }
 
     @Test
     void throwUserLoginExceptionIfUserDoesNotExist(){
-        UserLoginDto loginDto = new UserLoginDto("lalal@gmail.com", "1234");
+        UserLoginDTO loginDto = new UserLoginDTO("lalal@gmail.com", "1234");
         assertThrows(UserLoginException.class, ()-> loginService.isLoggedIn(loginDto));
     }
 
     @Test
     void throwUserLoginExceptionIfPasswordIsNotCorrect(){
-        UserLoginDto loginDto = new UserLoginDto("adex@gmail.com", "abdce");
+        UserLoginDTO loginDto = new UserLoginDTO("adex@gmail.com", "abdce");
         assertThrows(UserLoginException.class, ()-> loginService.isLoggedIn(loginDto));
     }
 }

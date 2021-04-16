@@ -7,7 +7,7 @@ import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 
 @Data
-public class UserLoginDto {
+public class UserLoginDTO {
     @NotNull
     @NonNull
     private String username;
