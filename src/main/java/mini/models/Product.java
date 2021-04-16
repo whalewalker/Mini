@@ -14,7 +14,6 @@ import java.math.BigDecimal;
 @Data
 @Document(collection = "product")
 @RequiredArgsConstructor
-
 public class Product {
     @Id
     private String id;
