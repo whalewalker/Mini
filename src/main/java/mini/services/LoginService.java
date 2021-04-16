@@ -1,8 +1,8 @@
 package mini.services;
 
-import mini.dtos.UserLoginDto;
+import mini.dtos.UserLoginDTO;
 import mini.exceptions.UserLoginException;
 
 public interface LoginService {
-    boolean isLoggedIn(UserLoginDto loginDto) throws UserLoginException;
+    boolean isLoggedIn(UserLoginDTO loginDto) throws UserLoginException;
 }

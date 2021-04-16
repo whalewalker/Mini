@@ -1,6 +1,6 @@
 package mini.services;
 
-import mini.dtos.UserLoginDto;
+import mini.dtos.UserLoginDTO;
 import mini.exceptions.UserLoginException;
 import mini.models.User;
 import mini.repositories.RegisterUserRepository;
@@ -15,7 +15,7 @@ public class LoginServiceImpl implements LoginService{
     RegisterUserRepository registerUserRepository;
 
     @Override
-    public boolean isLoggedIn(UserLoginDto loginDto) throws UserLoginException {
+    public boolean isLoggedIn(UserLoginDTO loginDto) throws UserLoginException {
         return isValid(loginDto.getUsername(), loginDto.getPassword());
     }
 
